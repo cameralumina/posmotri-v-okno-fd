@@ -127,10 +127,12 @@ ol {
   font-weight: 400;
   font-size: 18px;
   color: #fff;
+  margin-bottom: 5px;
+  
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 93.99999976158142%;
@@ -142,14 +144,6 @@ ol {
 
 .content__accent {
   color: #545050;
-  font-family: Oswald;
-  font-size: 75px;
-  font-weight: 700;
-  line-height: 93.99999976158142%;
-  letter-spacing: 0px;
-  text-align: left;
-  text-transform: uppercase;
-  text-decoration: none;
 }
 
 .content__card-link {
@@ -160,7 +154,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
@@ -169,6 +163,10 @@ ol {
   text-transform: uppercase;
   text-decoration: none;
   margin-bottom: 6px;
+  width: 196px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -176,8 +174,8 @@ ol {
   font-size: 18px;
   line-height: 90%;
   color: #fff;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 196px;
+  overflow-wrap: break-word;
 }
 
 .visually-hidden {
@@ -205,11 +203,11 @@ ol {
   width: fit-content;
   gap: 5px;
   cursor: pointer;
-  padding-top: 5px;
+
 }
 
 .search-form__textfield {
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
@@ -249,6 +247,16 @@ ol {
   opacity: 0;
 }
 
+.search-form__pseudo-checkbox:active {
+  border: 1px solid #fff;
+  width: 19px;
+  height: 19px;
+  padding: 1px;
+  content: "";
+  display: block;
+  background-color: #fff;
+}
+
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   opacity: 1;
 }
@@ -258,9 +266,14 @@ ol {
   text-underline-offset: 3px;
 }
 
+.search-form__label-text:active {
+  text-decoration: none;
+}
+
+
 .button {
   background-color: transparent;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: normal;
@@ -279,6 +292,7 @@ ol {
   align-self: flex-end;
   min-height: inherit;
   max-height: inherit;
+  margin-top: 5px;
 }
 
 .more-button {
@@ -293,22 +307,15 @@ ol {
 .button:active {
   background-color: #545050;
   border-color: #ffffff;
+  text-decoration: none;
 }
 
 .button:focus-visible {
   outline: solid #fff 1px;
-  outline-offset: 1px;
 }
 
 .content__card-link_current {
   background-color: #545050;
-}
-
-.content__card-link:active {
-  background-color: #545050;
-}
-
-.content__card-link_current:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -318,12 +325,16 @@ ol {
   text-underline-offset: 3px;
 }
 
-.content__card-link:focus {
-  outline: none;
+.content__card-link:active {
+  background-color: #545050;
+  text-decoration: none;
 }
 
 .content__card-link:focus-visible {
   outline: solid #fff 1px;
-  padding-left: 3px;
-  padding-right: 3px;
+}
+
+.content__card-link:focus {
+  outline: solid #fff 1px;
+  outline-offset: 0;
 }
